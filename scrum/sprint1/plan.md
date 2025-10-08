@@ -9,8 +9,8 @@ End: YYYY‑MM‑DD
 
 ## Roles (Rotate each sprint)
 - Product Owner: ___
-- Scrum Master: ___
-- Developers: ___, ___
+- Scrum Master: Tiana
+- Developers: Thales, Kenta
 
 ## Selected Stories (from Product Backlog)
 | ID | Story | Priority | Estimate | Acceptance Criteria (summary) |
