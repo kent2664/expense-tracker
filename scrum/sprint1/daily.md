@@ -13,9 +13,9 @@ Use bullets; keep it brief. Repeat for each day of the sprint.
 - Kenta — Yesterday: I did imlemention of home page / Today: Start the implements of HTMl(other)  / Blockers: none
 
 ## Day 3
-- Dev A — Yesterday: ___ / Today: ___ / Blockers: ___
-- Dev B — Yesterday: ___ / Today: ___ / Blockers: ___
-- Dev C — Yesterday: ___ / Today: ___ / Blockers: ___
+- Tiana — Yesterday: ___ / Today: ___ / Blockers: ___
+- Thales — Yesterday: start designing the other screens / Today: ___ / Blockers: ___
+- Kenta — Yesterday:  Start the implements of HTMl(other)  / Today: continue to implements of HTML(edit badget) / Blockers: ___
 
 ## Day 4
 - Dev A — Yesterday: ___ / Today: ___ / Blockers: ___
