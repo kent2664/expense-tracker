@@ -19,10 +19,10 @@ Use bullets; keep it brief. Repeat for each day of the sprint.
 
 ## Day 4
 - Dev A — Yesterday: ___ / Today: ___ / Blockers: ___
-Thales — Yesterday: Create the web screens (UX/UI) and refine the mobile screens / Today: Finalize de Ux and Ui / Blockers: No blockers
+- Thales — Yesterday: Create the web screens (UX/UI) and refine the mobile screens / Today: Finalize de Ux and Ui / Blockers: No blockers
 - Dev C — Yesterday: ___ / Today: ___ / Blockers: ___
 
 ## Day 5
 - Dev A — Yesterday: ___ / Today: ___ / Blockers: ___
-Thales — Yesterday: Finalize de Ux and Ui  / Today: Start the html and css code of the web version / Blockers: No blockers
+- Thales — Yesterday: Finalize de Ux and Ui  / Today: Start the html and css code of the web version / Blockers: No blockers
 - Dev C — Yesterday: ___ / Today: ___ / Blockers: ___
