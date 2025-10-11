@@ -18,11 +18,11 @@ Use bullets; keep it brief. Repeat for each day of the sprint.
 - Kenta — Yesterday:  Start the implements of HTMl(other)  / Today: continue to implements of HTML(edit badget) / Blockers: ___
 
 ## Day 4
-- Dev A — Yesterday: ___ / Today: ___ / Blockers: ___
-- Dev B — Yesterday: ___ / Today: ___ / Blockers: ___
-- Dev C — Yesterday: ___ / Today: ___ / Blockers: ___
+- Tiana — Yesterday: ___ / Today: ___ / Blockers: ___
+- Thales  — Yesterday: ___ / Today: ___ / Blockers: ___
+- Kenta— Yesterday: implements of HTML(edit badget) / Today: continue implements of HTML(edit badget) / Blockers: ___
 
 ## Day 5
-- Dev A — Yesterday: ___ / Today: ___ / Blockers: ___
-- Dev B — Yesterday: ___ / Today: ___ / Blockers: ___
-- Dev C — Yesterday: ___ / Today: ___ / Blockers: ___
+- Tiana — Yesterday: ___ / Today: ___ / Blockers: ___
+- Thales — Yesterday: ___ / Today: ___ / Blockers: ___
+- Kenta— Yesterday: implements of HTML(edit badget) / Today: Fixing html design(edit badget) / Blockers: ___
