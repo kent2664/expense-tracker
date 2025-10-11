@@ -3,4 +3,9 @@
     --sub-color: #323232;
     --bg-color: #161616;
     --text-color: #EFEFEF;
+    --danger-color: #DA4112;
+
+    --add-button-w: 153px;
+    --min-width-expense: 112px;
+    --max-width-expense: 136px;
 }
