@@ -1,17 +1,26 @@
 # Sprint 1 Review
 
 ## Done vs Sprint Goal
-- Goal: Core CRUD with LocalStorage + basic responsive UI
-- Completed stories: ___
-- Partially completed: ___
+- Goal: basic responsive UI, start coding html/css
+- Completed stories: No
+- Partially completed: 1,2,3,4,5
 
 ## Demo Notes
-- Show: add expense, list rendering, delete
+- Show: N/A
 - Stakeholder questions/feedback:
-  - ___
+  - N/A
 
 ## Product Backlog Updates
 - New items:
-  - ___
+  - Build expense form (HTML/CSS)
+  - Build budget form (HTML/CSS)
+  - Hook form submit → JS handler
+  - Save expense to LocalStorage
+  - Save budget to LocalStorage
+  - Render list from LocalStorage
+  - Render the budget amount from LocalStorage
+  - Implement delete action - expense (UI + JS)
+  - Implement edit action - budget (UI + JS)
+  - Basic responsive styling (mobile first)
 - Reprioritized items:
-  - ___
+  - N/A
