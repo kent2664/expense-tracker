@@ -14,7 +14,7 @@ Use bullets; keep it brief. Repeat for each day of the sprint.
 
 ## Day 3
 - Tiana — Yesterday: did implements of HTMl(new expense page) / Today: continue  implements of HTMl(expense page-button) / Blockers: none
-- Thales — Yesterday: start designing the other screens / Today: ___ / Blockers: ___
+- Thales — Yesterday: start designing the other screens / Today: Create the web screens (UX/UI) and refine the mobile screens / Blockers: No blockers
 - Kenta — Yesterday:  Start the implements of HTMl(other)  / Today: continue to implements of HTML(edit badget) / Blockers: ___
 
 ## Day 4
