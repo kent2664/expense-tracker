@@ -3,9 +3,9 @@
 Use bullets; keep it brief. Repeat for each day of the sprint.
 
 ## Day 1
-- Tiana — Yesterday: ___ / Today: ___ / Blockers: ___
-- Thales — Yesterday: ___ / Today: ___ / Blockers: ___
-- Kenta — Yesterday: ___ / Today: ___ / Blockers: ___
+- Tiana — Yesterday: implements of HTMl / Today: Starting Js part ( read data from local strage) / Blockers: There is no date to test the feature
+- Thales — Yesterday: html and css code of the web version / Today: polish entire HTML/Css things and brush up / Blockers: ___
+- Kenta — Yesterday: Fixing html design(edit badget) / Today: Make break down tasks for Javascript part / Blockers: ___
 
 ## Day 2
 - Tiana — Yesterday: ___ / Today: ___ / Blockers: ___
