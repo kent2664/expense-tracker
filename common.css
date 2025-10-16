@@ -9,3 +9,8 @@
     --min-width-expense: 112px;
     --max-width-expense: 136px;
 }
+
+button.active {
+    background-color: var(--main-color)!important;
+    color: var(--bg-color)!important;
+}
