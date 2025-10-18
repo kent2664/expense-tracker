@@ -9,3 +9,14 @@
     --min-width-expense: 112px;
     --max-width-expense: 136px;
 }
+
+/* Adicionando estilos para o input type="date" para temas escuros */
+.date-input-override::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Inverte a cor do ícone do calendário para ser visível */
+    opacity: 0.5; /* Suaviza a cor do ícone */
+}
+
+/* Estilo para navegadores Firefox */
+.date-input-override {
+    color-scheme: dark; 
+}
