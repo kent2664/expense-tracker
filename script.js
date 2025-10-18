@@ -174,7 +174,8 @@ function initIndexPage() {
                 const expenseId = link.dataset.id;
                 // Stores the expense ID in localStorage for the edit page
                 localStorage.setItem('editingExpenseId', expenseId);
-                window.location.href = 'editExpense.html';
+                // UPDATED: Path now points to pages/editExpense.html
+                window.location.href = 'pages/editExpense.html'; 
             }
         });
     }
@@ -413,7 +414,8 @@ function initEditExpensePage() {
 
     if (!expense) {
         alert('Expense not found!');
-        window.location.href = 'index.html';
+        // UPDATED: Redirect path back to the home page
+        window.location.href = '../index.html'; 
         return;
     }
 
@@ -501,7 +503,6 @@ function checkBudgetStatus(remainingBudget) {
             // Note: The notification dot status for LOW budget is now delegated to checkCategoryLimits 
             // to show only one warning (either low budget or category limit). 
             // For now, we only use the dot for OVERSPENT (red) or Category Limit (yellow).
-            // We will let checkCategoryLimits handle the yellow dot unless it is RED from overspending.
 
         } else {
             // Status: OK (Main Color - Green)
@@ -589,7 +590,7 @@ function renderExpenses(monthFilter = 'September', categoryFilter = 'All') {
     const filteredExpenses = data.expenses.filter(expense => {
         // Date format is DD/MM/YYYY
         const dateParts = expense.date.split('/');
-        // Ignore expenses with invalid date format
+        // Ignores expenses with invalid date format
         if (dateParts.length !== 3) return false; 
         
         const expenseMonth = parseInt(dateParts[1]); // Month is the second element (MM)
@@ -636,7 +637,7 @@ function renderExpenses(monthFilter = 'September', categoryFilter = 'All') {
             </div>
             <div
                 class="w-full h-2/6 bg-[var(--sub-color)] flex justify-center items-center rounded-2xl border border-gray-800">
-                <a href="editExpense.html" class="block edit-expense-link" data-id="${expense.id}">Edit</a>
+                <a href="pages/editExpense.html" class="block edit-expense-link" data-id="${expense.id}">Edit</a>
             </div>
         `;
         container.appendChild(expenseCard);
@@ -781,7 +782,9 @@ function handleAddExpense(e) {
     saveData(data);
     
     alert('Expense added successfully!');
-    window.location.href = 'index.html'; // Redirects to the home page
+    // ATUALIZADO: Caminho de redirecionamento para a home page (um nível acima de 'pages/')
+    // This is the fix, assuming 'addExpense.html' is now inside 'pages/'
+    window.location.href = '../index.html'; 
 }
 
 /**
@@ -828,7 +831,8 @@ function handleEditBudget(e) {
     saveData(data);
     
     alert(`Budget and category limits for ${monthToEdit} updated successfully! Total Budget: ${totalCalculatedBudget.toFixed(2)} CAD`);
-    window.location.href = 'index.html'; // Redirects to the home page
+    // UPDATED: Redirect path to the home page (one level above 'pages/')
+    window.location.href = '../index.html'; 
 }
 
 /**
@@ -873,7 +877,8 @@ function handleUpdateExpense(e) {
         // Clears the temporary value
         localStorage.removeItem('editingExpenseOriginalAmount');
         alert('Expense updated successfully!');
-        window.location.href = 'index.html';
+        // UPDATED: Redirect path to the home page (one level above 'pages/')
+        window.location.href = '../index.html';
     } else {
         alert('Error finding expense to update.');
     }
@@ -901,7 +906,8 @@ function handleDeleteExpense() {
     // Clears temporary editing data
     localStorage.removeItem('editingExpenseId'); 
     localStorage.removeItem('editingExpenseOriginalAmount');
-    window.location.href = 'index.html'; 
+    // UPDATED: Redirect path to the home page (one level above 'pages/')
+    window.location.href = '../index.html'; 
 }
 
 
@@ -949,6 +955,7 @@ function initApp() {
     else if (path.includes('editExpense.html')) {
         initEditExpensePage();
     }
+    
 }
 
 // Starts the application when the DOM content is fully loaded
