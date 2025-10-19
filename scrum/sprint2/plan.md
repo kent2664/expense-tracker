@@ -4,13 +4,13 @@
 **Sprint Goal:**basic responsive UI
 
 ## Sprint Dates
-Start: 2025‑10‑06  
-End: 2025‑10‑10
+Start: 2025‑10‑14  
+End: 2025‑10‑17
 
 ## Roles (Rotate each sprint)
-- Product Owner: Kenta
-- Scrum Master: Tiana
-- Developers: Thales, Kenta
+- Product Owner: Tiana
+- Scrum Master: Kenta
+- Developers: Thales,Tiana, Kenta
 
 ## Selected Stories (from Product Backlog)
 | ID | Story | Priority | Estimate | Acceptance Criteria (summary) |
