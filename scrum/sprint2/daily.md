@@ -8,17 +8,17 @@ Use bullets; keep it brief. Repeat for each day of the sprint.
 - Kenta — Yesterday: Fixing html design(edit badget) / Today: Make break down tasks for Javascript part / Blockers: ___
 
 ## Day 2
-- Tiana — Yesterday: ___ / Today: ___ / Blockers: ___
+- Tiana — Yesterday: Starting Js part ( read data from local strage) / Today:Doing Js part ( read data from local strage)/ Blockers: ___
 - Thales — Yesterday: polish entire HTML/Css things and brush up / Today: Fix buttons and path between html and css pages / Blockers: No blockers
 - Kenta — Yesterday: ___ / Today: ___ / Blockers: ___
 
 ## Day 3
-- Tiana — Yesterday: ___ / Today: ___ / Blockers: ___
+- Tiana — Yesterday: Doing Js part (budget read data) / Today: Doing Js part (expend read data)/ Blockers: ___
 - Thales — Yesterday: Fix buttons and path between html and css pages / Today: I fixed the paths and some bugs between the pages / Blockers: No blockers
 - Kenta — Yesterday: ___ / Today: ___ / Blockers: ___
 
 ## Day 4
-- Tiana — Yesterday: ___ / Today: ___ / Blockers: ___
+- Tiana — Yesterday: Doing Js part (expend read data) / Today: Done Js part (read data / Blockers: ___
 - Thales — Yesterday: ___ / Today: ___ / Blockers: ___
 - Kenta — Yesterday: ___ / Today: ___ / Blockers: ___
 
