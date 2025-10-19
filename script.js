@@ -796,11 +796,15 @@ function handleEditBudget(e) {
     e.preventDefault();
 
     const data = loadData();
-    
-    // 1. GET THE MONTH BEING EDITED
+
+    //bring current month
     const monthToEdit = document.getElementById('budget-current-month-display').textContent.trim();
 
-    // 2. READ CATEGORY LIMITS AND CALCULATE TOTAL BUDGET
+    //if monthToEdit empty-> use current month default.
+    const fallbackMonth = new Date().toLocaleString('en-US', { month: 'long' });
+    const activeMonth = monthToEdit || fallbackMonth;
+
+    //read category limits & calculate total sum
     const newCategoryLimits = {};
     const limitInputs = document.querySelectorAll('.category-limit-input');
     
@@ -817,23 +821,21 @@ function handleEditBudget(e) {
             return;
         }
         newCategoryLimits[category] = limit;
-        totalCalculatedBudget += limit; // Sums all limits
+        totalCalculatedBudget += limit;
     });
 
     if (!isValid) return;
 
-    // 3. SAVE TO DATA STRUCTURE
-    // Stores the category limits for the selected month
-    data.categoryLimits[monthToEdit] = newCategoryLimits;
-    // Stores the calculated total budget for the selected month
-    data.monthlyBudget[monthToEdit] = totalCalculatedBudget;
-
+    //save at the localStorage
+    data.categoryLimits[activeMonth] = newCategoryLimits;
+    data.monthlyBudget[activeMonth] = totalCalculatedBudget;
     saveData(data);
-    
-    alert(`Budget and category limits for ${monthToEdit} updated successfully! Total Budget: ${totalCalculatedBudget.toFixed(2)} CAD`);
-    // UPDATED: Redirect path to the home page (one level above 'pages/')
-    window.location.href = '../index.html'; 
+
+    //if sucess ->alarm + move to home
+    alert(`Budget for ${activeMonth} saved! Total: ${totalCalculatedBudget.toFixed(2)} CAD`);
+    window.location.href = '../index.html';
 }
+
 
 /**
  * Handles updating an expense.
