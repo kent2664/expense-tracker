@@ -14,7 +14,7 @@ Use bullets; keep it brief. Repeat for each day of the sprint.
 
 ## Day 3
 - Tiana — Yesterday: ___ / Today: ___ / Blockers: ___
-- Thales — Yesterday: ___ / Today: ___ / Blockers: ___
+- Thales — Yesterday: Fix buttons and path between html and css pages / Today: I fixed the paths and some bugs between the pages / Blockers: No blockers
 - Kenta — Yesterday: ___ / Today: ___ / Blockers: ___
 
 ## Day 4
