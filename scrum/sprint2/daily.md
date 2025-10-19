@@ -19,7 +19,7 @@ Use bullets; keep it brief. Repeat for each day of the sprint.
 
 ## Day 4
 - Tiana — Yesterday: ___ / Today: ___ / Blockers: ___
-- Thales — Yesterday: ___ / Today: ___ / Blockers: ___
+- Thales — Yesterday: I fixed the paths and some bugs between the pages / Today: Fixed icons for page edit expense and fixed icons for expense boxes / Blockers: No blockers
 - Kenta — Yesterday: ___ / Today: ___ / Blockers: ___
 
 ## Day 5
