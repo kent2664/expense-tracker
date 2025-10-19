@@ -5,7 +5,7 @@
 const STORAGE_KEY = 'expenseTrackerData';
 let selectedCategory = null; 
 // currentMonth will be set to the actual current month in initApp/initIndexPage
-let currentMonth = new Date().toLocaleString('en-US', { month: 'long' }); 
+let currentMonth = new Date().toLocaleString('default', { month: 'long' });
 let currentCategoryFilter = 'All'; 
 
 /**
@@ -632,7 +632,7 @@ function renderExpenses(monthFilter = 'September', categoryFilter = 'All') {
                     <p class="text-sm">${day}</p>
                     <img src="./assets/icons/${iconName}.png" alt="${expense.category}" class="w-4 h-4 my-1">
                 </div>
-                <p class="text-2xl text-[var(--main-color)]">${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'CAD' }).format(-expense.amount)}</p>
+                <p class="text-xl font-bold text-[var(--main-color)] overflow-hidden whitespace-nowrap text-ellipsis max-w-full truncate">${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'CAD' }).format(-expense.amount)}</p>
                 <p class="text-xs text-gray-400">${expense.description}</p>
             </div>
             <div
