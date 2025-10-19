@@ -624,6 +624,8 @@ function renderExpenses(monthFilter = 'September', categoryFilter = 'All') {
         if (iconName.includes('eatout')) iconName = 'eat-out';
         if (iconName.includes('workout')) iconName = 'gym';
         if (iconName.includes('clothes')) iconName = 'clothes';
+        if (iconName.includes('date')) iconName = 'dating';
+        if (iconName.includes('savings')) iconName = 'save';
         
         // The expense amount is displayed as negative on the frontend (to indicate spending)
         expenseCard.innerHTML = `
