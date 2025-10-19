@@ -21,13 +21,15 @@
         </div>
     </header>
     <main>
-        <div class="absolute ml-[16px]">
+        <a href="../index.html" class="absolute ml-[16px]">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path>
             </svg>
-        </div>
-        <div class="flex flex-col items-center">
+        </a>
+        <form id="edit-expense-form" class="flex flex-col items-center">
+            <input type="hidden" id="expense-id-input" value=""> 
+
             <div class="w-full md:w-1/2 flex flex-row items-center px-4">
                 <div class="w-full flex flex-col items-center items-center gap-6">
                     <h2 class="text-2xl">Edit expense</h2>
@@ -37,56 +39,65 @@
                 <div
                     class="w-full h-16 bg-[var(--sub-color)] flex flex-row justify-center items-center rounded-xl px-4 gap-3">
                     <p class="w-5/10 text-xl">New expense</p>
-                    <p class="w-4/10 text-3xl">50,000</p>
+                    <input type="number" step="0.01" id="expense-amount" required
+                        class="w-4/10 text-3xl bg-[var(--sub-color)] text-right p-0 m-0 border-none focus:outline-none" />
                     <p class="w-1/10 text-lg">$</p>
                 </div>
             </div>
-            <div class="w-full md:w-1/2 flex flex-col justify-center items-center px-4 mt-8">
-                <button
-                    class="w-full flex flex-row justify-start items-center bg-[var(--sub-color)] rounded-t-xl p-2 gap-4">
+            <div class="w-full md:w-1/2 flex flex-col justify-center items-center px-4 mt-8" id="category-buttons-container-edit">
+                <button type="button" data-category="Transportation"
+                    class="w-full category-btn-edit flex flex-row justify-start items-center bg-[var(--sub-color)] rounded-t-xl p-2 gap-4">
                     <img src="../assets/icons/transportation.png" class="w-6" alt="">
                     <p>Transportation fare</p>
                 </button>
-                <button class="w-full flex flex-row justify-start items-center bg-[var(--sub-color)]  p-2 gap-4">
+                <button type="button" data-category="Education"
+                    class="w-full category-btn-edit flex flex-row justify-start items-center bg-[var(--sub-color)]  p-2 gap-4">
                     <img src="../assets/icons/education.png" class="w-6" alt="">
                     <p>Education</p>
                 </button>
-                <button class="w-full flex flex-row justify-start items-center bg-[var(--sub-color)] p-2 gap-4">
+                <button type="button" data-category="Medical"
+                    class="w-full category-btn-edit flex flex-row justify-start items-center bg-[var(--sub-color)] p-2 gap-4">
                     <img src="../assets/icons/medical.png" class="w-6" alt="">
                     <p>Medical</p>
                 </button>
-                <button class="w-full flex flex-row justify-start items-center bg-[var(--sub-color)] p-2 gap-4">
+                <button type="button" data-category="Essentials"
+                    class="w-full category-btn-edit flex flex-row justify-start items-center bg-[var(--sub-color)] p-2 gap-4">
                     <img src="../assets/icons/essentials.png" class="w-6" alt="">
                     <p>Essentials</p>
                 </button>
-                <button class="w-full flex flex-row justify-start items-center bg-[var(--sub-color)] p-2 gap-4">
+                <button type="button" data-category="Clothes"
+                    class="w-full category-btn-edit flex flex-row justify-start items-center bg-[var(--sub-color)] p-2 gap-4">
                     <img src="../assets/icons/clothes.png" class="w-6" alt="">
                     <p>Shopping</p>
                 </button>
-                <button class="w-full flex flex-row justify-start items-center bg-[var(--sub-color)] p-2 gap-4">
+                <button type="button" data-category="Phone"
+                    class="w-full category-btn-edit flex flex-row justify-start items-center bg-[var(--sub-color)] p-2 gap-4">
                     <img src="../assets/icons/phone.png" class="w-6 " alt="">
                     <p>Phone bill</p>
                 </button>
-                <button class="w-full flex flex-row justify-start items-center bg-[var(--sub-color)] p-2 gap-4">
+                <button type="button" data-category="Eat-out"
+                    class="w-full category-btn-edit flex flex-row justify-start items-center bg-[var(--sub-color)] p-2 gap-4">
                     <img src="../assets/icons/eat-out.png" class="w-6 " alt="">
                     <p>Restaulant Meals</p>
                 </button>
-                <button class="w-full flex flex-row justify-start items-center bg-[var(--sub-color)] p-2 gap-4">
+                <button type="button" data-category="Savings"
+                    class="w-full category-btn-edit flex flex-row justify-start items-center bg-[var(--sub-color)] p-2 gap-4">
                     <img src="../assets/icons/save.png" class="w-6 " alt="">
                     <p>Savings</p>
                 </button>
-                <button class="w-full flex flex-row justify-start items-center bg-[var(--sub-color)] p-2 gap-4">
+                <button type="button" data-category="Date"
+                    class="w-full category-btn-edit flex flex-row justify-start items-center bg-[var(--sub-color)] p-2 gap-4">
                     <img src="../assets/icons/dating.png" class="w-6 " alt="">
                     <p>Date</p>
                 </button>
-                <button
-                    class="w-full flex flex-row justify-start items-center bg-[var(--sub-color)] rounded-b-xl p-2 gap-4">
+                <button type="button" data-category="Work Out"
+                    class="w-full category-btn-edit flex flex-row justify-start items-center bg-[var(--sub-color)] rounded-b-xl p-2 gap-4">
                     <img src="../assets/icons/gym.png" class="w-6 " alt="">
                     <p>Work Out</p>
                 </button>
             </div>
             <div class="w-full md:w-1/2 flex flex-col justify-center items-center px-4 rounded-xl mt-8">
-                <textarea name="" id="" placeholder="Description" style="height: 180px;"
+                <textarea name="" id="expense-description" placeholder="Description" style="height: 180px;"
                     class="w-full bg-[var(--sub-color)] rounded-xl p-4 resize-none"></textarea>
             </div>
             <div class="w-full md:w-1/2 flex flex-col justify-between md:justify-center items-center px-4 mt-8">
@@ -99,19 +110,17 @@
                         </path>
                     </svg>
                     <p>Date</p>
-                    <p>30/09/2025</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
-                    </svg>
+                    <input type="date" id="expense-date-input-edit" value="2025-09-30" 
+                        class="bg-[var(--sub-color)] text-[var(--text-color)] border-none focus:outline-none text-right">
                 </div>
                 <div class="w-full flex-row px-8 flex justify-between items-center mt-8 mb-4 gap-3">
-                    <button class="w-2/3 h-10 bg-[var(--main-color)] text-black text-xl rounded-2xl">Save</button>
-                    <button class="w-2/3 h-10 bg-[var(--danger-color)] text-[var(--text-color)] text-xl rounded-2xl">Delete</button>
+                    <button type="submit" class="w-2/3 h-10 bg-[var(--main-color)] text-black text-xl rounded-2xl">Save</button>
+                    <button type="button" id="delete-expense-btn" class="w-2/3 h-10 bg-[var(--danger-color)] text-[var(--text-color)] text-xl rounded-2xl">Delete</button>
                 </div>
             </div>
-        </div>
+        </form>
     </main>
+    <script src="../script.js"></script>
 </body>
 
 </html>
