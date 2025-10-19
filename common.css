@@ -10,7 +10,13 @@
     --max-width-expense: 136px;
 }
 
-button.active {
-    background-color: var(--main-color)!important;
-    color: var(--bg-color)!important;
+
+.date-input-override::-webkit-calendar-picker-indicator {
+    filter: invert(1); 
+    opacity: 0.5; 
+}
+
+
+.date-input-override {
+    color-scheme: dark; 
 }

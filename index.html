@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./common.css">
@@ -13,27 +13,32 @@
     <header>
         <div class="w-full h-16 flex justify-between items-center px-4">
             <p class="text-xl text-[var(--text-color)]">Hi, kenta</p>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="8%" height="50%" viewBox="0 0 24 24"
-                stroke-Width="2" stroke="currentColor" className="h-1 w-1">
-                <path strokeLinecap="round" strokeLinejoin="round"
-                    d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
-            </svg>
-        </div>
+            <div id="notification-container" class="relative">
+                <svg id="notification-icon" xmlns="http://www.w3.org/2000/svg" fill="none" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-Width="2" stroke="currentColor" class="h-6 w-6">
+                    <path strokeLinecap="round" strokeLinejoin="round"
+                        d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                </svg>
+                <span id="notification-dot" class="absolute top-0 right-0 block w-2 h-2 rounded-full bg-red-500 hidden"></span>
+            </div>
+            </div>
     </header>
     <main class="w-full h-[calc(100vh-4rem)] flex flex-col px-4 ">
         <div class="w-full flex flex-col gap-6">
             <div class="flex gap-6">
                 <div class="w-full lg:w-[484px] h-24 flex flex-col justify-center px-6 bg-[var(--sub-color)] rounded-lg">
                     <p class="text-md text-[var(--main-color)]">Expense</p>
-                    <p class="text-3xl">$0,00</p>
+                    <p class="text-3xl" id="expense-total-display">$0,00</p>
                 </div>
-                <div class="w-full lg:w-[484px] h-24 flex flex-col justify-center px-6 bg-[var(--main-color)] rounded-lg">
-                    <p class="text-md text-[var(--bg-color)]">Budget</p>
-                    <p class="text-3xl text-[var(--bg-color)]">$0,00</p>
-                </div>
+                <a href="pages/editBudget.html" id="budget-card-link"
+                    class="w-full lg:w-[484px] h-24 flex flex-col justify-center px-6 rounded-lg">
+                    <p class="text-md text-[var(--bg-color)]">Remaining Budget</p>
+                    <p class="text-3xl text-[var(--bg-color)]" id="budget-display">$0,00</p>
+                </a>
             </div>
             <div class="flex gap-6">
-                <div class="w-full md:w-[var(--add-button-w)] h-24 flex flex-col justify-center items-center px-6 bg-[var(--sub-color)] rounded-lg">
+                <a href="pages/addExpense.html"
+                    class="w-full md:w-[var(--add-button-w)] h-24 flex flex-col justify-center items-center px-6 bg-[var(--sub-color)] rounded-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                         class="size-8 text-[var(--main-color)]">
                         <path fill-rule="evenodd"
@@ -41,210 +46,114 @@
                             clip-rule="evenodd" />
                     </svg>
                     <p class="text-sm">Add Expense</p>
-                </div>
-                <div class="w-full md:w-[var(--add-button-w)] h-24 flex flex-col justify-center items-center px-6 bg-[var(--sub-color)] rounded-lg">
+                </a>
+                <a href="pages/editBudget.html"
+                    class="w-full md:w-[var(--add-button-w)] h-24 flex flex-col justify-center items-center px-6 bg-[var(--sub-color)] rounded-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                         class="size-8 text-[var(--main-color)]">
                         <path fill-rule="evenodd"
                             d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z"
                             clip-rule="evenodd" />
                     </svg>
-                    <p class="text-sm">Add Budget</p>
-                </div>
-            </div>
-        </div>
-        <div class="w-full md:w-[337px] h-20 md:h-fit md:py-[16px] flex justify-between items-center mt-6 px-4 bg-[var(--sub-color)] rounded-2xl relative">
-            <div class="flex flex-row items-center gap-4">
-                <p class="text-md">September</p>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                </svg>
-            </div>
-            <a href="#" class="text-sm text-[var(--text-color)]"> All</a>
-            <!-- Hidden for now -->
-            <div class="absolute bottom-0 left-0 w-1/3 h-1 bg-[var(--sub-color)] rounded-full hidden">
-                <ul class="flex justify-between px-4">
-                    <li class="text-sm text-[var(--main-color)]">October</li>
-                    <li class="text-sm text-[var(--text-color)]">November</li>
-                    <li class="text-sm text-[var(--text-color)]">December</li>
-                </ul>
+                    <p class="text-sm">Edit Budget</p>
+                </a>
             </div>
         </div>
         <div
-            class="w-full flex flex-wrap gap-2 mt-6 overflow-y-auto [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]">
-            <!-- this part should be add by Javascript-->
-            <div class="w-full min-w-[var(--min-width-expense)] max-w-[var(--max-width-expense)] h-28 bg-[var(--sub-color)] rounded-2xl flex flex-col">
-                <div class="w-full h-4/6 flex flex-col justify-center items-center">
-                    <div class="w-full flex flex-row justify-between items-center px-2">
-                        <p class="text-sm">30</p>
-                        <img src="./assets/icons/clothes.png" alt="shopping-bag" class="w-4 h-4 my-1">
-                    </div>
-                    <p class="text-2xl text-[var(--main-color)]">$-10.50</p>
-                </div>
-                <div
-                    class="w-full h-2/6 bg-[var(--sub-color)] flex justify-center items-center rounded-2xl border border-gray-800">
-                    <a link="#" class="block">Edit</a>
-                </div>
+            class="w-full md:w-[337px] h-20 md:h-fit md:py-[16px] flex justify-between items-center mt-6 px-4 bg-[var(--sub-color)] rounded-2xl relative">
+            <button id="month-selector-btn" class="flex flex-row items-center gap-4">
+                <p class="text-md" id="current-month-display">September</p>
+                <svg id="month-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6 transition-transform">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+            </button>
+            <button id="category-filter-btn" class="text-sm text-[var(--text-color)]"> <span
+                    id="current-category-display">All</span></button>
+
+            <div id="month-dropdown"
+                class="absolute top-full left-0 mt-2 w-40 bg-[var(--sub-color)] rounded-lg shadow-lg z-10 hidden">
+                <ul class="p-2">
+                    <li data-month="January"
+                        class="month-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--text-color)]">January
+                    </li>
+                    <li data-month="February"
+                        class="month-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--text-color)]">February
+                    </li>
+                    <li data-month="March"
+                        class="month-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--text-color)]">March
+                    </li>
+                    <li data-month="April"
+                        class="month-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--text-color)]">April
+                    </li>
+                    <li data-month="May"
+                        class="month-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--text-color)]">May</li>
+                    <li data-month="June"
+                        class="month-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--text-color)]">June</li>
+                    <li data-month="July"
+                        class="month-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--text-color)]">July</li>
+                    <li data-month="August"
+                        class="month-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--text-color)]">August
+                    </li>
+                    <li data-month="September"
+                        class="month-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--main-color)]">
+                        September</li>
+                    <li data-month="October"
+                        class="month-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--text-color)]">October
+                    </li>
+                    <li data-month="November"
+                        class="month-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--text-color)]">November
+                    </li>
+                    <li data-month="December"
+                        class="month-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--text-color)]">December
+                    </li>
+                </ul>
             </div>
-            <div class="w-full min-w-[var(--min-width-expense)] max-w-[var(--max-width-expense)] h-28 bg-[var(--sub-color)] rounded-2xl flex flex-col justify-between">
-                <div class="w-full h-4/6 flex flex-col justify-center items-center">
-                    <div class="w-full flex flex-row justify-between items-center px-2">
-                        <p class="text-sm">30</p>
-                        <img src="./assets/icons/clothes.png" alt="shopping-bag" class="w-4 h-4 my-1">
-                    </div>
-                    <p class="text-2xl text-[var(--main-color)]">$-10.50</p>
-                </div>
-                <div
-                    class="w-full h-2/6 bg-[var(--sub-color)] flex justify-center items-center rounded-2xl border border-gray-800">
-                    <a link="#" class="block">Edit</a>
-                </div>
-            </div>
-            <div class="w-full min-w-[var(--min-width-expense)] max-w-[var(--max-width-expense)] h-28 bg-[var(--sub-color)] rounded-2xl flex flex-col">
-                <div class="w-full h-4/6 flex flex-col justify-center items-center">
-                    <div class="w-full flex flex-row justify-between items-center px-2">
-                        <p class="text-sm">30</p>
-                        <img src="./assets/icons/clothes.png" alt="shopping-bag" class="w-4 h-4 my-1">
-                    </div>
-                    <p class="text-2xl text-[var(--main-color)]">$-10.50</p>
-                </div>
-                <div
-                    class="w-full h-2/6 bg-[var(--sub-color)] flex justify-center items-center rounded-2xl border border-gray-800">
-                    <a link="#" class="block">Edit</a>
-                </div>
-            </div>
-            <div class="w-full min-w-[var(--min-width-expense)] max-w-[var(--max-width-expense)] h-28 bg-[var(--sub-color)] rounded-2xl flex flex-col">
-                <div class="w-full h-4/6 flex flex-col justify-center items-center">
-                    <div class="w-full flex flex-row justify-between items-center px-2">
-                        <p class="text-sm">30</p>
-                        <img src="./assets/icons/clothes.png" alt="shopping-bag" class="w-4 h-4 my-1">
-                    </div>
-                    <p class="text-2xl text-[var(--main-color)]">$-10.50</p>
-                </div>
-                <div
-                    class="w-full h-2/6 bg-[var(--sub-color)] flex justify-center items-center rounded-2xl border border-gray-800">
-                    <a link="#" class="block">Edit</a>
-                </div>
-            </div>
-            <div class="w-full min-w-[var(--min-width-expense)] max-w-[var(--max-width-expense)] h-28 bg-[var(--sub-color)] rounded-2xl flex flex-col">
-                <div class="w-full h-4/6 flex flex-col justify-center items-center">
-                    <div class="w-full flex flex-row justify-between items-center px-2">
-                        <p class="text-sm">30</p>
-                        <img src="./assets/icons/clothes.png" alt="shopping-bag" class="w-4 h-4 my-1">
-                    </div>
-                    <p class="text-2xl text-[var(--main-color)]">$-10.50</p>
-                </div>
-                <div
-                    class="w-full h-2/6 bg-[var(--sub-color)] flex justify-center items-center rounded-2xl border border-gray-800">
-                    <a link="#" class="block">Edit</a>
-                </div>
-            </div>
-            <div class="w-full min-w-[var(--min-width-expense)] max-w-[var(--max-width-expense)] h-28 bg-[var(--sub-color)] rounded-2xl flex flex-col">
-                <div class="w-full h-4/6 flex flex-col justify-center items-center">
-                    <div class="w-full flex flex-row justify-between items-center px-2">
-                        <p class="text-sm">30</p>
-                        <img src="./assets/icons/clothes.png" alt="shopping-bag" class="w-4 h-4 my-1">
-                    </div>
-                    <p class="text-2xl text-[var(--main-color)]">$-10.50</p>
-                </div>
-                <div
-                    class="w-full h-2/6 bg-[var(--sub-color)] flex justify-center items-center rounded-2xl border border-gray-800">
-                    <a link="#" class="block">Edit</a>
-                </div>
-            </div>
-            <div class="w-full min-w-[var(--min-width-expense)] max-w-[var(--max-width-expense)] h-28 bg-[var(--sub-color)] rounded-2xl flex flex-col">
-                <div class="w-full h-4/6 flex flex-col justify-center items-center">
-                    <div class="w-full flex flex-row justify-between items-center px-2">
-                        <p class="text-sm">30</p>
-                        <img src="./assets/icons/clothes.png" alt="shopping-bag" class="w-4 h-4 my-1">
-                    </div>
-                    <p class="text-2xl text-[var(--main-color)]">$-10.50</p>
-                </div>
-                <div
-                    class="w-full h-2/6 bg-[var(--sub-color)] flex justify-center items-center rounded-2xl border border-gray-800">
-                    <a link="#" class="block">Edit</a>
-                </div>
-            </div>
-            <div class="w-full min-w-[var(--min-width-expense)] max-w-[var(--max-width-expense)] h-28 bg-[var(--sub-color)] rounded-2xl flex flex-col">
-                <div class="w-full h-4/6 flex flex-col justify-center items-center">
-                    <div class="w-full flex flex-row justify-between items-center px-2">
-                        <p class="text-sm">30</p>
-                        <img src="./assets/icons/clothes.png" alt="shopping-bag" class="w-4 h-4 my-1">
-                    </div>
-                    <p class="text-2xl text-[var(--main-color)]">$-10.50</p>
-                </div>
-                <div
-                    class="w-full h-2/6 bg-[var(--sub-color)] flex justify-center items-center rounded-2xl border border-gray-800">
-                    <a link="#" class="block">Edit</a>
-                </div>
-            </div>
-            <div class="w-full min-w-[var(--min-width-expense)] max-w-[var(--max-width-expense)] h-28 bg-[var(--sub-color)] rounded-2xl flex flex-col">
-                <div class="w-full h-4/6 flex flex-col justify-center items-center">
-                    <div class="w-full flex flex-row justify-between items-center px-2">
-                        <p class="text-sm">30</p>
-                        <img src="./assets/icons/clothes.png" alt="shopping-bag" class="w-4 h-4 my-1">
-                    </div>
-                    <p class="text-2xl text-[var(--main-color)]">$-10.50</p>
-                </div>
-                <div
-                    class="w-full h-2/6 bg-[var(--sub-color)] flex justify-center items-center rounded-2xl border border-gray-800">
-                    <a link="#" class="block">Edit</a>
-                </div>
-            </div>
-            <div class="w-full min-w-[var(--min-width-expense)] max-w-[var(--max-width-expense)] h-28 bg-[var(--sub-color)] rounded-2xl flex flex-col">
-                <div class="w-full h-4/6 flex flex-col justify-center items-center">
-                    <div class="w-full flex flex-row justify-between items-center px-2">
-                        <p class="text-sm">30</p>
-                        <img src="./assets/icons/clothes.png" alt="shopping-bag" class="w-4 h-4 my-1">
-                    </div>
-                    <p class="text-2xl text-[var(--main-color)]">$-10.50</p>
-                </div>
-                <div
-                    class="w-full h-2/6 bg-[var(--sub-color)] flex justify-center items-center rounded-2xl border border-gray-800">
-                    <a link="#" class="block">Edit</a>
-                </div>
-            </div>
-            <div class="w-full min-w-[var(--min-width-expense)] max-w-[var(--max-width-expense)] h-28 bg-[var(--sub-color)] rounded-2xl flex flex-col">
-                <div class="w-full h-4/6 flex flex-col justify-center items-center">
-                    <div class="w-full flex flex-row justify-between items-center px-2">
-                        <p class="text-sm">30</p>
-                        <img src="./assets/icons/clothes.png" alt="shopping-bag" class="w-4 h-4 my-1">
-                    </div>
-                    <p class="text-2xl text-[var(--main-color)]">$-10.50</p>
-                </div>
-                <div
-                    class="w-full h-2/6 bg-[var(--sub-color)] flex justify-center items-center rounded-2xl border border-gray-800">
-                    <a link="#" class="block">Edit</a>
-                </div>
-            </div>
-            <div class="w-full min-w-[var(--min-width-expense)] max-w-[var(--max-width-expense)] h-28 bg-[var(--sub-color)] rounded-2xl flex flex-col">
-                <div class="w-full h-4/6 flex flex-col justify-center items-center">
-                    <div class="w-full flex flex-row justify-between items-center px-2">
-                        <p class="text-sm">30</p>
-                        <img src="./assets/icons/clothes.png" alt="shopping-bag" class="w-4 h-4 my-1">
-                    </div>
-                    <p class="text-2xl text-[var(--main-color)]">$-10.50</p>
-                </div>
-                <div
-                    class="w-full h-2/6 bg-[var(--sub-color)] flex justify-center items-center rounded-2xl border border-gray-800">
-                    <a link="#" class="block">Edit</a>
-                </div>
-            </div>
-            <div class="w-full min-w-[var(--min-width-expense)] max-w-[var(--max-width-expense)] h-28 bg-[var(--sub-color)] rounded-2xl flex flex-col">
-                <div class="w-full h-4/6 flex flex-col justify-center items-center">
-                    <div class="w-full flex flex-row justify-between items-center px-2">
-                        <p class="text-sm">30</p>
-                        <img src="./assets/icons/clothes.png" alt="shopping-bag" class="w-4 h-4 my-1">
-                    </div>
-                    <p class="text-2xl text-[var(--main-color)]">$-10.50</p>
-                </div>
-                <div
-                    class="w-full h-2/6 bg-[var(--sub-color)] flex justify-center items-center rounded-2xl border border-gray-800">
-                    <a link="#" class="block">Edit</a>
-                </div>
+
+            <div id="category-dropdown"
+                class="absolute top-full right-0 mt-2 w-40 bg-[var(--sub-color)] rounded-lg shadow-lg z-10 hidden">
+                <ul class="p-2">
+                    <li data-category="All"
+                        class="category-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--main-color)]">All
+                    </li>
+                    <li data-category="Transportation"
+                        class="category-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--text-color)]">
+                        Transportation fare</li>
+                    <li data-category="Education"
+                        class="category-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--text-color)]">
+                        Education</li>
+                    <li data-category="Medical"
+                        class="category-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--text-color)]">Medical
+                    </li>
+                    <li data-category="Essentials"
+                        class="category-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--text-color)]">
+                        Essentials</li>
+                    <li data-category="Clothes"
+                        class="category-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--text-color)]">
+                        Shopping</li>
+                    <li data-category="Phone"
+                        class="category-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--text-color)]">Phone
+                        bill</li>
+                    <li data-category="Eat-out"
+                        class="category-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--text-color)]">
+                        Restaulant Meals</li>
+                    <li data-category="Savings"
+                        class="category-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--text-color)]">Savings
+                    </li>
+                    <li data-category="Date"
+                        class="category-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--text-color)]">Date
+                    </li>
+                    <li data-category="Work Out"
+                        class="category-option p-2 hover:bg-gray-700 rounded cursor-pointer text-[var(--text-color)]">Work
+                        Out</li>
+                </ul>
             </div>
         </div>
+        <div id="expense-list-container"
+            class="w-full flex flex-wrap gap-2 mt-6 overflow-y-auto">
+        </div>
     </main>
+    <script src="./script.js"></script>
 </body>
 
 </html>
