@@ -10,12 +10,12 @@ Use bullets; keep it brief. Repeat for each day of the sprint.
 ## Day 2
 - Tiana — Yesterday: ___ / Today: ___ / Blockers: ___
 - Thales — Yesterday: polish entire HTML/Css things and brush up / Today: Fix buttons and path between html and css pages / Blockers: No blockers
-- Kenta — Yesterday: ___ / Today: ___ / Blockers: ___
+- Kenta — Yesterday: Make break down tasks for Javascript part / Today: start to implement Expense Save feature / Blockers: ___
 
 ## Day 3
 - Tiana — Yesterday: ___ / Today: ___ / Blockers: ___
 - Thales — Yesterday: Fix buttons and path between html and css pages / Today: I fixed the paths and some bugs between the pages / Blockers: No blockers
-- Kenta — Yesterday: ___ / Today: ___ / Blockers: ___
+- Kenta — Yesterday: start to implement Expense Save feature / Today: ___ / Blockers: ___
 
 ## Day 4
 - Tiana — Yesterday: ___ / Today: ___ / Blockers: ___

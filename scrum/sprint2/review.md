@@ -1,9 +1,9 @@
-# Sprint 1 Review
+# Sprint 2 Review
 
 ## Done vs Sprint Goal
 - Goal: basic responsive UI, start coding html/css
-- Completed stories: No
-- Partially completed: 1,2,3,4,5
+- Completed stories: 1,2,3,4,5
+- Partially completed:Everything finished
 
 ## Demo Notes
 - Show: N/A
@@ -12,15 +12,6 @@
 
 ## Product Backlog Updates
 - New items:
-  - Build expense form (HTML/CSS)
-  - Build budget form (HTML/CSS)
-  - Hook form submit → JS handler
-  - Save expense to LocalStorage
-  - Save budget to LocalStorage
-  - Render list from LocalStorage
-  - Render the budget amount from LocalStorage
-  - Implement delete action - expense (UI + JS)
-  - Implement edit action - budget (UI + JS)
-  - Basic responsive styling (mobile first)
+  - Add animation when the expense get close to budget amount.
 - Reprioritized items:
   - N/A
