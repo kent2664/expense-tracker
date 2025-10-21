@@ -15,10 +15,10 @@ Use bullets; keep it brief. Repeat for each day of the sprint.
 ## Day 3
 - Tiana — Yesterday: ___ / Today: ___ / Blockers: ___
 - Thales — Yesterday: Fix buttons and path between html and css pages / Today: I fixed the paths and some bugs between the pages / Blockers: No blockers
-- Kenta — Yesterday: start to implement Expense Save feature / Today: ___ / Blockers: ___
+- Kenta — Yesterday: start to implement Expense Save feature / Today: Finish to implement Expense Save feature / Blockers: ___
 
 ## Day 4
 - Tiana — Yesterday: ___ / Today: ___ / Blockers: ___
 - Thales — Yesterday: I fixed the paths and some bugs between the pages / Today: Fixed icons for page edit expense and fixed icons for expense boxes / Blockers: No blockers
-- Kenta — Yesterday: ___ / Today: ___ / Blockers: ___
+- Kenta — Yesterday:  Finish to implement Expense Save feature / Today: Testing features and making task for sprint 3 / Blockers: ___
 
