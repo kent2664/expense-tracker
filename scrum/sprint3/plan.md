@@ -1,4 +1,4 @@
-# Sprint 2 Plan
+# Sprint 1 Plan
 
 **Project:** Expense Tracker  
 **Sprint Goal:**basic responsive UI
@@ -26,13 +26,13 @@ End: 2025‑10‑17
 |---|---|---|---|---|
 | 1 | Build expense form (HTML/CSS) |  |  | Done |
 | 4 | Build budget form (HTML/CSS) |  |  | Done |
-| 1 | Hook form submit → JS handler |  |  | Done |
-| 1 | Save expense to LocalStorage |  |  | Done |
-| 4 | Save budget to LocalStorage |  |  | Done |
-| 3 | Render list from LocalStorage |  |  | Done |
-| 4 | Render the budget amount from LocalStorage |  |  | Done |
-| 2 | Implement delete action - expense (UI + JS) |  |  | Done |
-| 4 | Implement edit action - budget (UI + JS) |  |  | Done |
+| 1 | Hook form submit → JS handler |  |  | To‑Do |
+| 1 | Save expense to LocalStorage |  |  | To‑Do |
+| 4 | Save budget to LocalStorage |  |  | To‑Do |
+| 3 | Render list from LocalStorage |  |  | To‑Do |
+| 4 | Render the budget amount from LocalStorage |  |  | To‑Do |
+| 2 | Implement delete action - expense (UI + JS) |  |  | To‑Do |
+| 4 | Implement edit action - budget (UI + JS) |  |  | To‑Do |
 | 5 | Basic responsive styling (mobile first) |  |  | Done |
 
 ## Definition of Done (reference)
