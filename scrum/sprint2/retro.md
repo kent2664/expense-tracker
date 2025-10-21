@@ -1,14 +1,11 @@
-# Sprint 1 Retrospective
+# Sprint 2 Retrospective
 
 ## What went well
-- We implemented HTML/CSS structure well.
+- We implemented JavaScript and polished HTML/CSS structure well.
 
 ## What could be improved
-- we implemented some elements as buttons however, It doesn't work 
+- One of the member started to implement, However another member did the task before earlier, We could be improved task management.
 
 ## Action item(s) for next sprint
-- Polish, html
-- Save expense to LocalStorage
-- Save budget to LocalStorage
-- Implement delete action - expense (UI + JS)
-- Implement edit action - budget (UI + JS)
+- UX, Polish
+- Test JavaScript. finding error
