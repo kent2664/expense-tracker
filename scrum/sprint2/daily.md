@@ -18,7 +18,6 @@ Use bullets; keep it brief. Repeat for each day of the sprint.
 - Kenta — Yesterday: start to implement Expense Save feature / Today: Finish to implement Expense Save feature / Blockers: ___
 
 ## Day 4
-<<<<<<< HEAD
 - Tiana — Yesterday: Doing Js part (expend read data) / Today: Done Js part read data / Blockers: ___
 - Thales — Yesterday: I fixed the paths and some bugs between the pages / Today: Fixed icons for page edit expense and fixed icons for expense boxes / Blockers: No blockers
 - Kenta — Yesterday:  Finish to implement Expense Save feature / Today: Testing features and making task for sprint 3 / Blockers: ___
