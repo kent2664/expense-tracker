@@ -6,7 +6,9 @@
 - Partially completed: 1,2,3,4,5
 
 ## Demo Notes
-- Show: N/A
+- Show: 
+ - Made responsive UI and coding html/css part
+   basic structure in common.css
 - Stakeholder questions/feedback:
   - N/A
 

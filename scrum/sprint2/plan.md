@@ -8,7 +8,7 @@ Start: 2025‑10‑14
 End: 2025‑10‑17
 
 ## Roles (Rotate each sprint)
-- Product Owner: Tiana
+- Product Owner: Thales
 - Scrum Master: Kenta
 - Developers: Thales,Tiana, Kenta
 

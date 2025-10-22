@@ -6,7 +6,9 @@
 - Partially completed:Everything finished
 
 ## Demo Notes
-- Show: N/A
+- Show: 
+ We implemented Javascript part such as reading data from LocalStrage and Save Expense and Budget Data.
+ Stakeholder is able to understand the flow of Adding expense data.
 - Stakeholder questions/feedback:
   - N/A
 
