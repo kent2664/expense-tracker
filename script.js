@@ -635,7 +635,7 @@ function renderExpenses(monthFilter = 'September', categoryFilter = 'All') {
                     <img src="./assets/icons/${iconName}.png" alt="${expense.category}" class="w-4 h-4 my-1">
                 </div>
                 <p class="text-xl font-bold text-[var(--main-color)] overflow-hidden whitespace-nowrap text-ellipsis max-w-full truncate">${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'CAD' }).format(-expense.amount)}</p>
-                <p class="text-xs text-gray-400">${expense.description}</p>
+                <p class="text-xs text-gray-400 px-6 w-full truncate">${expense.description}</p>
             </div>
             <div
                 class="w-full h-2/6 bg-[var(--sub-color)] flex justify-center items-center rounded-2xl border border-gray-800">

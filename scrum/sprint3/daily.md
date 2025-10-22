@@ -4,7 +4,7 @@ Use bullets; keep it brief. Repeat for each day of the sprint.
 
 ## Day 1
 - Tiana — Yesterday: ___ / Today: ___ / Blockers: ___
-- Thales — Yesterday: ___ / Today: ___ / Blockers: ___
+- Thales — Yesterday: Fixed icons for page edit expense and fixed icons for expense boxes / Today: UX polishing and some comments / Blockers: No blockers
 - Kenta — Yesterday: ___ / Today: ___ / Blockers: ___
 
 ## Day 2
