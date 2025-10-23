@@ -493,6 +493,9 @@ function checkBudgetStatus(remainingBudget) {
                 notificationDot.classList.remove('hidden');
                 notificationDot.classList.remove('bg-yellow-500'); // Remove yellow if already set
                 notificationDot.classList.add('bg-red-500');
+
+                notificationDot.classList.add('dot-flash');
+                setTimeout(() => notificationDot.classList.remove('dot-flash'), 2400);
             }
         } else if (remainingBudget <= LOW_BUDGET_THRESHOLD) {
             // Status: LOW (Yellow Warning)
@@ -503,6 +506,16 @@ function checkBudgetStatus(remainingBudget) {
             // Note: The notification dot status for LOW budget is now delegated to checkCategoryLimits 
             // to show only one warning (either low budget or category limit). 
             // For now, we only use the dot for OVERSPENT (red) or Category Limit (yellow).
+
+            if (notificationDot) {
+                notificationDot.classList.remove('hidden');
+                notificationDot.classList.remove('bg-red-500');
+                notificationDot.classList.add('bg-yellow-500');
+
+                // 🔥 Dot 반짝이기
+                notificationDot.classList.add('dot-flash');
+                setTimeout(() => notificationDot.classList.remove('dot-flash'), 2400);
+            }
 
         } else {
             // Status: OK (Main Color - Green)
@@ -728,7 +741,7 @@ function checkCategoryLimits() {
     const budgetCard = document.getElementById('budget-card-link');
     // Check if the budget status is already RED (overspent), which has priority
     const isBudgetOverspent = budgetCard && budgetCard.classList.contains('bg-red-600');
-    
+    const isBudgetLow = budgetCard && budgetCard.classList.contains('bg-yellow-600');
     if (isBudgetOverspent) {
         // If overspent, the dot is already RED and visible from checkBudgetStatus.
         return; 
@@ -740,7 +753,7 @@ function checkCategoryLimits() {
         // Ensure it's yellow for category warning
         dot.classList.remove('bg-red-500'); 
         dot.classList.add('bg-yellow-500');
-    } else {
+    } else if (!isBudgetLow) {
         // Only hide if the budget is not overspent AND no category limit exceeded
         dot.classList.add('hidden');
         dot.classList.remove('bg-yellow-500'); 
