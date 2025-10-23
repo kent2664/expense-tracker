@@ -8,7 +8,6 @@ Use bullets; keep it brief. Repeat for each day of the sprint.
 - Kenta — Yesterday: Testing features and making task for sprint 3  / Today: Fixing text overflowing over the border / Blockers: ___
 
 ## Day 2
-<<<<<<< HEAD
 - Tiana — Yesterday: Doing animation Js in alerts part / Today: Doing animation Js in alerts part / Blockers: ___
 - Thales — Yesterday: UX polishing and some comments / Today: Test calculation features, for example, budget and expense / Blockers: No blockers
 - Kenta — Yesterday: Fixing text overflowing over the border / Today: testing over all features polish codes / Blockers: ___
