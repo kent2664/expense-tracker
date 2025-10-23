@@ -9,17 +9,17 @@ Use bullets; keep it brief. Repeat for each day of the sprint.
 
 ## Day 2
 - Tiana — Yesterday: ___ / Today: ___ / Blockers: ___
-- Thales — Yesterday: ___ / Today: ___ / Blockers: ___
+- Thales — Yesterday: UX polishing and some comments / Today: Test calculation features, for example, budget and expense / Blockers: No blockers
 - Kenta — Yesterday: Fixing text overflowing over the border / Today: testing over all features polish codes / Blockers: ___
 
 ## Day 3
 - Tiana — Yesterday: ___ / Today: ___ / Blockers: ___
-- Thales — Yesterday: ___ / Today: ___ / Blockers: ___
+- Thales — Yesterday: Test calculation features, for example, budget and expense / Today: Web and mobile responsiveness testing / Blockers: No blockers
 - Kenta — Yesterday: ___ / Today: ___ / Blockers: ___
 
 ## Day 4
 - Tiana — Yesterday: ___ / Today: ___ / Blockers: ___
-- Thales — Yesterday: ___ / Today: ___ / Blockers: ___
+- Thales — Yesterday: Web and mobile responsiveness testing / Today: final test of all features / Blockers: No blockers
 - Kenta — Yesterday: ___ / Today: ___ / Blockers: ___
 
 ## Day 5
